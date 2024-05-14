@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"');
+
+// BACKGROUND COLORS
+$background-color-dark: rgb(0, 0, 0);
+$background-color-grey: rgb(234, 232, 232);
+$background-color-light: rgb(243, 241, 240);
+$background-color-white: rgb(255, 255, 255);
+$background-color-primary: rgb(188, 1, 88);
+
+$background-black: linear-gradient(rgb(22, 22, 22), rgb(0, 0, 0));
+$background-primary-dark: linear-gradient(rgb(174, 25, 94), rgb(123, 16, 66));
+
+// FONT COLORS
+$color-light: rgb(244,244,244);
+$color-grey:  rgb(128, 128, 128);
+$color-dark: rgb(50, 50, 50);
+$color-primary: rgb(188, 1, 88);
+$color-primary-hover: rgb(174, 25, 94);
+
+// FONT STYLES
+$font-family: "Quicksand", sans-serif;
+
+// FONT SIZES
+$font-size-h1: 4em;
+$font-size-h2: 3em;
+$font-size-h3: 2.5em;
+$font-size-h4: 2em;
+$font-size-h5: 1.5em;
+$font-size-h6: 1.3em;
+
+$font-size-p: 1.1em;
+
+
+
+* {
+    font-family: $font-family;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}

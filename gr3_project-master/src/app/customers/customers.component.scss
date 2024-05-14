@@ -1,0 +1,221 @@
+@import '../../styles';
+
+.sl-costumers{
+  padding: 2rem;
+  h2{
+      text-align: center;
+      margin: 50px 0;
+  }
+  @mixin circle($i) {
+    border-radius: 100%;
+    height: $i;
+    width: $i;
+  }
+
+  $bgBlue: #001d38;
+  $cardBlack: #000;
+  $font: "Poppins";
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background: $bgBlue;
+    font-family: $font, sans-serif;
+    overflow: hidden;
+  }
+
+  .center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .wrapper {
+    display: flex;
+    grid-gap: 1em;
+    overflow: hidden;
+    width: calc(80vw + 2em);
+
+    @media (width < 767px){
+      grid-gap: 0;
+      width: calc(80vw);
+    }
+    
+    & > .inner {
+      display: flex;
+      align-items: stretch;
+      grid-gap: 1em;
+      transition: all 1s ease-in-out;
+      transform: translateX(0);
+      @media (width < 767px){
+        grid-gap: 0;
+      }
+    }
+  }
+
+  .card {
+    border-radius: 0.5em;
+    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    width: calc(80vw / 3);
+    color: #fff;
+    // height: 40rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    @media(width < 1024px){
+      width: calc(40vw + 0.5em);
+    }
+
+    @media(width < 767px){
+      width: 80vw;
+    }
+    .img{
+      height: 15rem;
+      max-height: 50%;
+      img {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        display: block;
+        height: 100%;
+        width: fit-content;
+        object-fit: cover;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+
+
+    & > .content {
+      background: $cardBlack;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      padding: 1em;
+      text-align: center;
+      // height: 50%;
+
+      & > h1,
+      & > h3 {
+        margin: 0.35em 0;
+      }
+
+      & > h1 {
+        color: #fff;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      & > h3 {
+        color: #ccc;
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+
+    p{
+      font-size: 14px;
+    }
+  }
+
+  .map {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+
+    button{
+      border: none;
+      background-color: transparent;
+    }
+    img{
+      width: 40px;
+    }
+
+    .sl-next{
+      transform: rotate(-180deg);
+    }
+
+    .button {
+      display: block;
+      position: relative;
+      width: 56px;
+      height: 56px;
+      margin: 0;
+      overflow: hidden;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      border: 0;
+      margin-top: 20px;
+    }
+    
+    .button:before,
+    .button:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      inset: 7px;
+    }
+    
+    .button:before {
+      border: 4px solid #f0eeef;
+      transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+    }
+    
+    .button:after {
+      border: 4px solid #000;
+      transform: scale(1.3);
+      transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      opacity: 0;
+    }
+    
+    .button:hover:before,
+    .button:focus:before {
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .button:hover:after,
+    .button:focus:after {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+        transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+    }
+    
+    .button-box {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .button-elem {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 21px 18px 0 18px;
+      transform: rotate(180deg);
+      fill: #000;
+    }
+    
+    .button:hover .button-box,
+    .button:focus .button-box {
+      transition: 0.4s;
+      transform: translateX(-56px);
+    }
+    
+  }
+}
+
+  

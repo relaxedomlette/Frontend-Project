@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@coreui/coreui/scss/coreui";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"');
+
+// BACKGROUND COLORS
+$background-color-dark: rgb(0, 0, 0);
+$background-color-grey: rgb(234, 232, 232);
+$background-color-light: rgb(243, 241, 240);
+$background-color-white: rgb(255, 255, 255);
+$background-color-primary: rgb(188, 1, 88);
+$background-color-opacity: rgba(0,0,0, 0.2);
+
+$background-black: linear-gradient(rgb(22, 22, 22), rgb(0, 0, 0));
+$background-light: linear-gradient(rgb(234, 234, 234), rgb(255, 255, 255));
+$background-primary-dark: linear-gradient(rgb(174, 25, 94), rgb(123, 16, 66));
+
+// FONT COLORS
+$color-light: rgb(244,244,244);
+$color-grey:  rgb(128, 128, 128);
+$color-dark: rgb(50, 50, 50);
+$color-primary: rgb(188, 1, 88);
+$color-primary-hover: rgb(174, 25, 94);
+
+// FONT STYLES
+$font-family: "Quicksand", sans-serif;
+
+// FONT SIZES
+$font-size-h1: 4em;
+$font-size-h2: 3em;
+$font-size-h3: 2.5em;
+$font-size-h4: 2em;
+$font-size-h5: 1.5em;
+$font-size-h6: 1.3em;
+
+$font-size-p: 1.1em;
+
+//BACKGROUND POSITION
+$transition:background-position .12s ease-in-out;
+
+* {
+    box-sizing: border-box;
+    transition: $transition;
+}
+
+// body {
+//     margin: 0;
+// }
+
+// Sebi
+app-navbar{
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
+app-about{
+    top: 0;
+    position: relative;
+    transition: .5s;
+    &.sl-menuOpen{
+        top: 245px;
+    }
+}
+app-home{
+    top: 0;
+    position: relative;
+    transition: .5s;
+    &.sl-menuOpen{
+        top: 245px;
+    }
+}
+app-testimonials{
+    top: 0;
+    position: relative;
+    transition: .5s;
+    &.sl-menuOpen{
+        top: 245px;
+    }
+}
+app-contact{
+    top: 0;
+    position: relative;
+    transition: .5s;
+    &.sl-menuOpen{
+        top: 245px;
+    }
+}
+app-footer{
+    top: 0;
+    position: relative;
+    transition: .5s;
+    &.sl-menuOpen{
+        top: 245px;
+    }
+}
+.scroll{
+    app-about{
+        &.sl-menuOpen{
+            top: 0;
+        }
+    }    
+    app-contact{
+        &.sl-menuOpen{
+            top: 0;
+        }
+    }    
+    app-footer{
+        &.sl-menuOpen{
+            top: 0;
+        }
+    }
+    app-testimonials{
+        &.sl-menuOpen{
+            top: 0;
+        }
+    }    
+    app-home{
+        &.sl-menuOpen{
+            top: 0;
+        }
+    }   
+    .mobile-menu{
+        top: 60px;
+    }
+}

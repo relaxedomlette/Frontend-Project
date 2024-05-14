@@ -1,0 +1,75 @@
+@import '../../styles';
+
+.grid-system {
+    background: #151515 url("") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    & .container {
+        & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & h4 {
+                color: $color-primary;
+                font-size: $font-size-h4;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 1rem;
+            }
+            & h2 {
+                color: $color-light;
+                font-weight: 500;
+                font-size: $font-size-h5;
+                margin: 0;
+            }
+            & p {
+                color: $color-light;
+                font-weight: 400;
+                font-size: $font-size-h6;
+                margin-bottom: 1rem;
+            }
+        }
+        & .row {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 1rem;
+            padding: 1rem;
+            & .col {
+                background-color: rgba(0,0,0, 0.8);
+                border: 1px solid black;
+                text-align: center;
+                font-size: 30px;
+                height: 15rem;
+              }
+        }
+    }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .portfolio .container .row {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+        padding: 1rem;
+}
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}

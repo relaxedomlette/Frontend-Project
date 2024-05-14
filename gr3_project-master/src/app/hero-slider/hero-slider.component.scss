@@ -1,0 +1,23 @@
+.sl-hero{
+    // position: absolute;
+    // top: 0;
+    max-height: 100vh;
+    margin-top: -136px;
+    // height: 100vh;
+    *{
+        max-height: 100vh;
+        height: inherit;
+        // height: 100vh;
+    }
+    c-carousel-caption{
+        top: 78%;
+        bottom: unset;
+        text-align: center;
+        left: 0;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.456);
+        // padding: 20px 50px;
+        width: 100%;
+    }
+}
+

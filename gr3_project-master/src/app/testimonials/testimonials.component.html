@@ -1,0 +1,51 @@
+<section>
+  <div class="container">
+    <div class="container__top">
+      <div class="container__left">
+        <h1>Read what our customers love about us</h1>
+        <p>
+          Discover the heartfelt testimonials from our valued customers as they
+          share their genuine experiences with us.<br />
+          From exceptional customer support to top-notch product quality, each
+          testimonial reflects the trust and satisfaction our customers have in
+          our brand.<br />
+          Explore firsthand accounts of how we've exceeded expectations, met
+          needs, and provided unparalleled value.
+        </p>
+        <p>
+          Delve into the exceptional quality and unparalleled support that
+          distinguish us, as articulated by those whose opinions matter most.
+        </p>
+        <button routerLink="/about">About us</button>
+      </div>
+      <div class="container__right">
+        <h3>You wanna share your own experience with us?</h3>
+        <p>
+          We value your feedback and would love to hear about your experience!
+          If you're eager to share your thoughts with us, head over to our
+          "Contact" page now. We're all ears and can't wait to hear from you!
+        </p>
+        <button routerLink="/contact">Contact Us</button>
+      </div>
+    </div>
+    <div class="container__bottom">
+      <div *ngFor="let testimonial of testimonials" class="card">
+        <img class="card__avatar" [src]="testimonial.img" alt="user" />
+        <div class="card__content">
+          <span
+            ><img
+              class="card__icon"
+              src="assets/img/testimonials/quote.png"
+              alt=""
+          /></span>
+          <div class="card__details">
+            <p>
+              {{ testimonial.description }}
+            </p>
+            <h4>- {{ testimonial.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
